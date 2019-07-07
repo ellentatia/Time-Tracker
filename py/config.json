@@ -1,0 +1,6 @@
+{
+    "client = pymongo.MongoClient("mongodb+srv://ellenguimaraes:<12505Qtal!>@cluster0-ftgmu.mongodb.net/test?retryWrites=true&w=majority")
+db = client.test": "mongodb+srv://XXXXXXX:XXXXXXX@cluster0-jvnpg.mongodb.net/test?retryWrites=true",
+    "fbclientId": "XXXXXXXXXX",
+    "fbclientSecret": "XXXXXXXXXXXX"
+}
