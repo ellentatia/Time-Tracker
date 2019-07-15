@@ -1,4 +1,5 @@
-import pymongo, json
+import pymongo
+import json
 
 
 def getConfig(configitem):
