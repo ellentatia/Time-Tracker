@@ -6,6 +6,9 @@ body{
 }
 
 label {
+    font-family: adelle, serif;
+    font-style: normal;
+    font-weight: 100;
     font-size: 1rem !important;
     color: rgba(0,0,0,0.87) !important;
 }
