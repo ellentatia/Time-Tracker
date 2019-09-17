@@ -1,6 +1,5 @@
-/*!
-*Materilize and customized style
-*/
+
+@import url("navbar.css");
 
 .toast {
   top: 25px!important;
@@ -360,6 +359,10 @@
   padding: 10px 0px;
   color: rgba(0,0,0,1);
   background-color: rgba(0, 0, 0, 0);
+}
+
+#map {
+    height: 200;
 }
 
    /*!button
