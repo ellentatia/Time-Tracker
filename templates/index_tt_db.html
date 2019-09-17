@@ -66,9 +66,9 @@
 				</div>
 			</nav>
 			<ul class="sidenav" id="mobile-demo">
-				<li><a href="javascript:void(0)" onclick="showLoginPage()"><i class="material-icons" >home</i> &nbsp; Início</a></li>
-				<li><a href="javascript:void(0)" onclick="showMapPage()"><i class="material-icons" >map</i> &nbsp; Mapa</a></li>
-				<li><a href="javascript:void(0)" onclick="showFormPage()"><i class="material-icons" >assignment</i> &nbsp; Cadastro</a></li>
+				<li><a href="javascript:void(0)" onclick="showloginPage()"><i class="material-icons" >home</i> &nbsp; Início</a></li>
+				<li><a href="javascript:void(0)" onclick="showmapPage()"><i class="material-icons" >map</i> &nbsp; Mapa</a></li>
+				<li><a href="javascript:void(0)" onclick="showformPage()"><i class="material-icons" >assignment</i> &nbsp; Cadastro</a></li>
 			</ul>
 	</section>
 
@@ -107,7 +107,7 @@
                     <button class="btn waves-effect blue-grey darken-4 z-depth-0 modal-trigger" style="background-color:#0a1323 font-color:white bold"
                     type= "submit" value="howtoplay" onclick="showstartPage()">START</button></center>
         </div>
-    <br>
+
     <center>
     <div id="fb-root"></div>
 				<div class="fb-login-button" data-size="large" data-button-type="login_with"
@@ -463,12 +463,41 @@ Click each box this applies to. Hit “calculate” when you finish.
 <!--Modal Initialization-->
      <script src="/static/js/application.js"></script>
 
-     <script>
-      //sections
- function hideAllPages() {
-  document.getElementById("introductionPage").style.display = "none";
+<script>
+var login = "";
+var token = "";
+var userid = "";
+var username = "Você";
+
+
+
+//Inicializacao do Menu
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.sidenav');
+  var instances = M.Sidenav.init(elems);
+});
+
+
+function hideAllPages() {
+  document.getElementById("loginPage").style.display = "none";
+  document.getElementById("formPage").style.display = "none";
+  document.getElementById("mapPage").style.display = "none";
   document.getElementById("instructionsPage").style.display = "none";
   document.getElementById("startPage").style.display = "none";
+}
+
+function showloginPage() {
+  hideAllPages();
+  document.getElementById("loginPage").style.display = "block";
+}
+function showformPage() {
+  hideAllPages();
+  document.getElementById("formPage").style.display = "block";
+}
+function showMapPage() {
+  hideAllPages();
+  document.getElementById("mapPage").style.display = "block";
+  listForm();
 }
 function showinstructionsPage() {
   hideAllPages();
@@ -478,7 +507,57 @@ function showstartPage() {
   hideAllPages();
   document.getElementById("startPage").style.display = "block";
 }
-     </script>
+
+function saveNewUser(login, userid, username, useremail) {
+	addMarker(latitude, longitude, username);
+	document.getElementById("userfield").innerHTML = "Usuário:<b> " + username + "</b>";
+	var url = "/saveNewUser?"
+				+ "login=" + login
+				+ "&userid=" + userid
+        + "&latitude=" + latitude
+        + "&longitude=" + longitude
+				+ "&username=" + username
+				+ "&useremail=" + useremail;
+
+  fetch(url, {method: 'POST'})
+    .then(function(response) {
+      console.log('Successful login: ' + response);
+    });
+}
+
+function roundToTwo(num)
+{
+    return +(Math.round(num + "e+2")  + "e-2");
+ }
+
+function checkboxes()
+    {
+     var modalContent = document.getElementById('modalContentContainer');
+     var inputElems = document.getElementsByTagName("input"),
+      count = 0;
+
+      for (var i=0; i<inputElems.length; i++) {
+        if (inputElems[i].type == "checkbox" && inputElems[i].checked == true){
+            count++
+            total= roundToTwo(count*4.2);
+        }
+      }
+     modalContent.innerHTML = total+"%";
+ }
+
+document.addEventListener("DOMContentLoaded", function()
+{
+       const box = document.querySelectorAll(".modal");
+       M.Modal.init(box, {
+           opacity:0.6,
+           inDuration:250,
+           outDuration:250,
+           dismissible: true,
+
+       });
+ });
+
+</script>
 
   </body>
 </html>

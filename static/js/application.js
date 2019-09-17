@@ -20,11 +20,11 @@ function hideAllPages() {
   document.getElementById("startPage").style.display = "none";
 }
 
-function showLoginPage() {
+function showloginPage() {
   hideAllPages();
   document.getElementById("loginPage").style.display = "block";
 }
-function showFormPage() {
+function showformPage() {
   hideAllPages();
   document.getElementById("formPage").style.display = "block";
 }
@@ -37,7 +37,7 @@ function showinstructionsPage() {
   hideAllPages();
   document.getElementById("instructionsPage").style.display = "block";
 }
-function showStartPage() {
+function showstartPage() {
   hideAllPages();
   document.getElementById("startPage").style.display = "block";
 }
