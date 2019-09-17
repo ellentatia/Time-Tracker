@@ -16,8 +16,11 @@ function hideAllPages() {
   document.getElementById("loginPage").style.display = "none";
   document.getElementById("formPage").style.display = "none";
   document.getElementById("mapPage").style.display = "none";
-
+  document.getElementById("introductionPage").style.display = "none";
+  document.getElementById("instructionsPage").style.display = "none";
+  document.getElementById("startPage").style.display = "none";
 }
+
 function showLoginPage() {
   hideAllPages();
   document.getElementById("loginPage").style.display = "block";
@@ -31,7 +34,14 @@ function showMapPage() {
   document.getElementById("mapPage").style.display = "block";
   listForm();
 }
-
+function showinstructionsPage() {
+  hideAllPages();
+  document.getElementById("instructionsPage").style.display = "block";
+}
+function showStartPage() {
+  hideAllPages();
+  document.getElementById("startPage").style.display = "block";
+}
 
 function saveNewUser(login, userid, username, useremail) {
 	addMarker(latitude, longitude, username);
@@ -81,20 +91,3 @@ document.addEventListener("DOMContentLoaded", function()
 
        });
  });
-
- //sections
-
- function hideAllPages() {
-  document.getElementById("introductionPage").style.display = "none";
-  document.getElementById("instructionsPage").style.display = "none";
-  document.getElementById("startPage").style.display = "none";
-
-}
-function showinstructionsPage() {
-  hideAllPages();
-  document.getElementById("instructionsPage").style.display = "block";
-}
-function showStartPage() {
-  hideAllPages();
-  document.getElementById("startPage").style.display = "block";
-}
