@@ -6,4 +6,4 @@ application = Flask(__name__)
 
 @application.route('/')
 def main():
-    return render_template('index_start.html')
+    return render_template('index_tt_db.html')
