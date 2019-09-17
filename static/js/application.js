@@ -16,7 +16,6 @@ function hideAllPages() {
   document.getElementById("loginPage").style.display = "none";
   document.getElementById("formPage").style.display = "none";
   document.getElementById("mapPage").style.display = "none";
-  document.getElementById("introductionPage").style.display = "none";
   document.getElementById("instructionsPage").style.display = "none";
   document.getElementById("startPage").style.display = "none";
 }

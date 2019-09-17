@@ -52,8 +52,8 @@
   <body style="background-color:#ffe763">
       <!--header page-->
 
-    	<div>
-		<section id="header">
+    <div>
+	<section id="header">
 			<nav>
 				<div class="nav-wrapper">
 					<a href="#" data-target="mobile-demo" class="sidenav-trigger">
@@ -70,59 +70,14 @@
 				<li><a href="javascript:void(0)" onclick="showMapPage()"><i class="material-icons" >map</i> &nbsp; Mapa</a></li>
 				<li><a href="javascript:void(0)" onclick="showFormPage()"><i class="material-icons" >assignment</i> &nbsp; Cadastro</a></li>
 			</ul>
-		</section>
-        		</section>
+	</section>
 
-		<section id="loginPage">
-			<center>
-				<br/><br/><br/>
-				<img src="../static/logoapp.png" width="200" alt="Logo do App" />
-				<br/><br/><br/>
+            <!--loginPage page-->
 
-				<div id="fb-root"></div>
-				<div class="fb-login-button" data-size="large" data-button-type="login_with"
-					data-auto-logout-link="true" data-use-continue-as="false"
-					scope="public_profile,email" onlogin="checkLoginState();"></div>
-
-				<br/><br/>
-				<div id="google-signin2"></div>
-			</center>
-		</section>
-
-		<section id="mapPage" style="display:none;">
-			<center>
-				<h1>Mapa</h1></center>
-				<div id="map"></div>
-				<br/>
-			<div id="listFormDiv" style="margin:20px;"></div>
-		</section>
-
-		<section id="formPage" style="display:none;">
-			<center>
-				<h1>Cadastro</h1></center>
-			<div id="userfield" style="margin:30px;">
-				Usuário:<b> Não Logado</b>
-			</div>
-			<div style="margin:30px;">
-				<label for="feedbackmessageTextArea"><b>Envie-nos seu feedback, dúvidas ou sugestões:</b></label>
-				<textarea id="feedbackmessageTextArea"></textarea>
-			</div>
-			<div style="margin:30px;">
-				<label for="contactField"><b>Informação de contato:</b></label>
-				<input id="contactField" type="text">
-			</div>
-			<div>
-				<center><button type="button" name="action" onclick="saveForm();">Salvar</button></center>
-			</div>
-		</section>
-    	</div>
-
-    <!--introduction page-->
-
-    <section id="introductionPage">
+    <section id="loginPage">
     <div >
     <div class="container" >
-      <section id="header">
+      <section>
         <div>
         <center>
         <br/>
@@ -155,11 +110,48 @@
     <br>
     <br>
     <br>
+    <div id="fb-root"></div>
+				<div class="fb-login-button" data-size="large" data-button-type="login_with"
+					data-auto-logout-link="true" data-use-continue-as="false"
+					scope="public_profile,email" onlogin="checkLoginState();"></div>
+
+				<br/><br/>
+				<div id="google-signin2"></div>
     </div>
     </div>
      </section>
 
-    <!-- end of instructions page-->
+    <!-- end of loginPage page-->
+
+	<section id="mapPage" style="display:none;">
+			<center>
+				<h1>Mapa</h1></center>
+				<div id="map"></div>
+				<br/>
+			<div id="listFormDiv" style="margin:20px;"></div>
+	</section>
+
+	<section id="formPage" style="display:none;">
+			<center>
+				<h1>Cadastro</h1></center>
+			<div id="userfield" style="margin:30px;">
+				Usuário:<b> Não Logado</b>
+			</div>
+			<div style="margin:30px;">
+				<label for="feedbackmessageTextArea"><b>Envie-nos seu feedback, dúvidas ou sugestões:</b></label>
+				<textarea id="feedbackmessageTextArea"></textarea>
+			</div>
+			<div style="margin:30px;">
+				<label for="contactField"><b>Informação de contato:</b></label>
+				<input id="contactField" type="text">
+			</div>
+			<div>
+				<center><button type="button" name="action" onclick="saveForm();">Salvar</button></center>
+			</div>
+	</section>
+    </div>
+
+
     <section id="instructionsPage"style="display:none;">
     <div >
     <div class="container" >
@@ -196,7 +188,7 @@ Click each box this applies to. Hit “calculate” when you finish.
     <br>
     </div>
     </div>
-     </section>
+    </section>
     <!--end of Instructions page-->
 
     <!--Start Page-->
