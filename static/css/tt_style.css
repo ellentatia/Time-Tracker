@@ -370,5 +370,5 @@
 .btn, .btn-large, .btn-small, .btn-flat {
 
     border: none;
-    border-radius: 25px;
+    border-radius: 25px!important;
 }
