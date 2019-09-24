@@ -286,7 +286,7 @@
    }
 
    [type="checkbox"].filled-in.tabbed:checked:focus + span:not(.lever):after {
-     border-radius: 2px;
+     border-radiusborder-radius: 2px;
      background-color: #fec746;
      border-color: #fec746;
    }
@@ -367,3 +367,8 @@
 
    /*!button
    */
+.btn, .btn-large, .btn-small, .btn-flat {
+
+    border: none;
+    border-radius: 25px;
+}
