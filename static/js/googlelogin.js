@@ -18,7 +18,7 @@ function onSuccess(googleUser) {
     userid = googleUser.getBasicProfile().getId();
     username = googleUser.getBasicProfile().getName();
     saveNewUser("gl", userid, username, googleUser.getBasicProfile().getEmail());
-    document.getElementById("google-signin2").innerHTML = '<b><a href="#" onclick="googleSignOut();">DESLOGAR DO GOOGLE</a></b>';
+    document.getElementById("google-signin2").innerHTML = '<b><a href="#" onclick="googleSignOut();">SIGN OUT FROM GOOGLE</a></b>';
 }
 
 function onFailure(error) {
@@ -28,6 +28,6 @@ function onFailure(error) {
 function googleSignOut() {
 	var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
-       document.getElementById("google-signin2").innerHTML = '<b>DESLOGADO DO GOOGLE</b>';
+       document.getElementById("google-signin2").innerHTML = '<b>SIGNED OUT FROM GOOGLE</b>';
     });
 }
