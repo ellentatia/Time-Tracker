@@ -49,7 +49,7 @@
     font-size: 80pt!important;
     font-weight: 700!important;
     line-height: 84pt!important;
-    border-bottom-color: rgba(0,0,0,1)!important;
+    outline-color: rgba(0,0,0,1)!important;
     color: #fec746
  }
 .h1 {
